@@ -49,3 +49,7 @@ All visualizations are generated natively in R/Python and exported as both `.pdf
 
 ---
 *Future Instruction for AGY: When resuming work on this repository, always read this file first to understand that no differential expression group-testing should be performed.*
+
+## 5. Raw Data Access
+*   **Google Drive Archive:** [Raw FASTQ, BAM, and Large Files](https://drive.google.com/drive/folders/1s6HS42fGcSoCgNkTawVGfZ5nhJUsGWVX?usp=drive_link)
+    *   *Note: These files exceed GitHub's size limits and are hosted externally.*
