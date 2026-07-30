@@ -11,7 +11,9 @@ library(ggplot2)
 library(ggrepel)
 
 outdir <- "downstream_results"
+vizdir <- "visualizations"
 dir.create(outdir, showWarnings=FALSE)
+dir.create(vizdir, showWarnings=FALSE)
 
 cat("Loading data...\n")
 counts_file <- read.table("counts/gene_counts.txt", header=TRUE, row.names=1, comment.char="#")
@@ -51,9 +53,11 @@ p <- ggplot(pcaData, aes(PC1, PC2, color=sample, label=sample)) +
   ylab(paste0("PC2: ",percentVar[2],"% variance")) +
   ggtitle("PCA Plot (Individual Samples)") +
   theme_bw() +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
   scale_color_brewer(palette="Set1")
 
-ggsave(file.path(outdir, "7_PCA_plot_individual.pdf"), plot=p, width=6, height=5)
+ggsave(file.path(vizdir, "7_PCA_plot_individual.pdf"), plot=p, width=6, height=5)
+ggsave(file.path(vizdir, "7_PCA_plot_individual.png"), plot=p, width=6, height=5, dpi=300)
 
 cat("Generating Sample Distance Plot...\n")
 sampleDists <- dist(t(vst_data))
@@ -61,21 +65,33 @@ sampleDistMatrix <- as.matrix(sampleDists)
 rownames(sampleDistMatrix) <- colnames(sampleDistMatrix) <- colnames(vst_data)
 colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
 
-pdf(file.path(outdir, "8_Sample_Distance_Matrix_individual.pdf"))
+# Save PDF
+pdf(file.path(vizdir, "8_Sample_Distance_Matrix_individual.pdf"))
 pheatmap(sampleDistMatrix,
          clustering_distance_rows=sampleDists,
          clustering_distance_cols=sampleDists,
          col=colors, main="Sample-to-Sample Distances")
 dev.off()
+# Save PNG
+pheatmap(sampleDistMatrix,
+         clustering_distance_rows=sampleDists,
+         clustering_distance_cols=sampleDists,
+         col=colors, main="Sample-to-Sample Distances",
+         filename=file.path(vizdir, "8_Sample_Distance_Matrix_individual.png"),
+         width=6, height=5)
 
 cat("Generating Top 50 Variable Genes Heatmap...\n")
 topVarGenes <- head(order(rowVars(vst_data), decreasing=TRUE), 50)
 mat <- vst_data[ topVarGenes, ]
 mat <- mat - rowMeans(mat)
 
-# No annotation_col needed as samples are independent
-pdf(file.path(outdir, "11_Heatmap_Top50_Variable_individual.pdf"))
+# Save PDF
+pdf(file.path(vizdir, "11_Heatmap_Top50_Variable_individual.pdf"))
 pheatmap(mat, main="Top 50 Variable Genes", scale="row", show_colnames=TRUE)
 dev.off()
+# Save PNG
+pheatmap(mat, main="Top 50 Variable Genes", scale="row", show_colnames=TRUE,
+         filename=file.path(vizdir, "11_Heatmap_Top50_Variable_individual.png"),
+         width=7, height=10)
 
 cat("R analysis complete.\n")
