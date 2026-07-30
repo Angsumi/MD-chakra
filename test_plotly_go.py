@@ -64,7 +64,7 @@ fig_go.update_layout(
 
 fig_go.update_xaxes(showline=True, linewidth=1, linecolor='black', gridcolor='white', tickfont=dict(size=12, color='black'))
 fig_go.update_yaxes(showline=True, linewidth=1, linecolor='black', gridcolor='lightgray',
-                    tickvals=[0.1, 1, 10, 100], ticktext=["0.1", "1", "10", "100"], range=[-1, 2.05],
+                    tickvals=[0.1, 1, 10, 100], ticktext=["0.1", "1", "10", "100"], range=[-1.5, 2.05],
                     title_font=dict(size=16, color='black'), tickfont=dict(size=14, color='black'))
 
 # Add right y-axis
@@ -77,7 +77,7 @@ fig_go.update_layout(
         overlaying='y',
         side='right',
         type='log',
-        range=[-1, 2.05],
+        range=[-1.5, 2.05],
         tickvals=[0.1, 1, 10, 100],
         ticktext=[
             f"{int(total_deg * 0.001)}<br>{int(total_all * 0.001)}",
@@ -109,7 +109,7 @@ fig_go.add_shape(type="rect", xref="paper", yref="paper", x0=legend_x+0.024, y0=
 fig_go.add_annotation(x=legend_x+0.04, y=legend_y_all, xref="paper", yref="paper", text="<b>All Unigene</b>", showarrow=False, font=dict(size=14, color="black"), xanchor="left")
 
 # X-axis brackets
-def add_bracket(fig, df, ontology, text, color, y_offset=-0.35, y_depth=0.03):
+def add_bracket(fig, df, ontology, text, color, y_offset=-1.0, y_depth=0.03):
     cats = df[df['Ontology'] == ontology]['Description'].unique()
     if len(cats) == 0: return
     x0 = cats[0]
@@ -127,9 +127,14 @@ def add_bracket(fig, df, ontology, text, color, y_offset=-0.35, y_depth=0.03):
     x_mid = cats[mid_idx]
     fig.add_annotation(x=x_mid, y=y_offset - 0.05, xref="x", yref="paper", text=f"<b>{text}</b>", showarrow=False, font=dict(size=16, color="black"), xanchor="center")
 
+fig_go.write_image("GO_Classification_without_ontology_labels.png", scale=2)
+
+# Now add extra margin for the brackets
+fig_go.update_layout(margin=dict(b=500, r=150, t=50, l=100))
+
 add_bracket(fig_go, df_go, 'Biological Process', 'biological process', 'black')
 add_bracket(fig_go, df_go, 'Cellular Component', 'cellular component', 'black')
 add_bracket(fig_go, df_go, 'Molecular Function', 'molecular function', 'black')
 
-fig_go.write_image("test_go.png", scale=2)
+fig_go.write_image("GO_Classification_with_ontology_labels.png", scale=2)
 print("Done")
