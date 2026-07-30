@@ -29,7 +29,7 @@
                     <strong>Generation Process:</strong>
                     Raw reads were filtered for rRNA, mapped via Bowtie2, quantified with featureCounts, and merged with GTF annotations using Python pandas. Includes Average Expression, StdDev, and Z-scores across all 4 independent samples.
                 </div>
-                <a href="assets/9_Annotated_Expression_Table_Individual.xlsx" class="btn" download>Download Table</a>
+                <a href="/MD-chakra/assets/9_Annotated_Expression_Table_Individual.xlsx" class="btn" download>Download Table</a>
             </div>
 
             <!-- Card 2 -->
@@ -43,7 +43,7 @@
                     <strong>Generation Process:</strong>
                     Since biological replicates and control/treatment groups are absent, standard DESeq2 statistical testing was bypassed. Instead, Log2FC was calculated directly between each sample pair on FPKM-normalized values.
                 </div>
-                <a href="assets/10_Pairwise_Comparisons.xlsx" class="btn" download>Download Comparisons</a>
+                <a href="/MD-chakra/assets/10_Pairwise_Comparisons.xlsx" class="btn" download>Download Comparisons</a>
             </div>
 
             <!-- Card 3 -->
@@ -57,7 +57,7 @@
                     <strong>Generation Process:</strong>
                     Using the DESeq2 R package, size factors were estimated treating all samples as independent (design = ~1). FPKM was calculated using the fpkm() function factoring in gene lengths from the GTF.
                 </div>
-                <a href="assets/6_FPKM_normalized_counts_individual.csv" class="btn" download>Download FPKM</a>
+                <a href="/MD-chakra/assets/6_FPKM_normalized_counts_individual.csv" class="btn" download>Download FPKM</a>
             </div>
 
         </div>
@@ -68,7 +68,7 @@
             <!-- Viz 1 -->
             <div class="viz-card">
                 <div class="viz-img-container">
-                    <img src="assets/PCA_plot-1.png" alt="Principal Component Analysis Plot">
+                    <img src="/MD-chakra/assets/7_PCA_plot_individual.png" alt="Principal Component Analysis Plot">
                 </div>
                 <div class="viz-content">
                     <h3>PCA Plot</h3>
@@ -79,7 +79,7 @@
             <!-- Viz 2 -->
             <div class="viz-card">
                 <div class="viz-img-container">
-                    <img src="assets/Distance_Matrix-1.png" alt="Sample Distance Matrix">
+                    <img src="/MD-chakra/assets/8_Sample_Distance_Matrix_individual.png" alt="Sample Distance Matrix">
                 </div>
                 <div class="viz-content">
                     <h3>Sample Distance Matrix</h3>
@@ -90,11 +90,22 @@
             <!-- Viz 3 -->
             <div class="viz-card">
                 <div class="viz-img-container">
-                    <img src="assets/Heatmap-1.png" alt="Top 50 Variable Genes Heatmap">
+                    <img src="/MD-chakra/assets/11_Heatmap_Top50_Variable_individual.png" alt="Top 50 Variable Genes Heatmap">
                 </div>
                 <div class="viz-content">
                     <h3>Top 50 Variable Genes</h3>
                     <p>A heatmap illustrating the expression patterns of the 50 genes with the highest variance across the 4 independent samples, highlighting specific expression signatures.</p>
+                </div>
+            </div>
+            
+            <!-- Viz 4 -->
+            <div class="viz-card">
+                <div class="viz-img-container">
+                    <img src="/MD-chakra/assets/GO_Classification_with_ontology_labels.png" alt="GO Classification (With Labels)">
+                </div>
+                <div class="viz-content">
+                    <h3>GO Classification</h3>
+                    <p>Gene Ontology (GO) classification bar chart, displaying the percentage and count of all unigenes versus Differentially Expressed Genes (DEGs).</p>
                 </div>
             </div>
 
