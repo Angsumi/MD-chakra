@@ -1,0 +1,5 @@
+Sample	bowtie_2_hisat2-overall_alignment_rate
+NPFM1_mapping_stats	65.36
+NPFM2_mapping_stats	50.71
+NPFM3_mapping_stats	66.16
+NPFM4_mapping_stats	67.63

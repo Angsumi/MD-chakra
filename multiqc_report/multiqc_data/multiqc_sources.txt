@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+fastp	all_sections	NPFM1	/home/angsuman/extra_spac/RNA_need_referance genome/fastp_qc/NPFM1_fastp_report.json
+fastp	all_sections	NPFM2	/home/angsuman/extra_spac/RNA_need_referance genome/fastp_qc/NPFM2_fastp_report.json
+fastp	all_sections	NPFM3	/home/angsuman/extra_spac/RNA_need_referance genome/fastp_qc/NPFM3_fastp_report.json
+fastp	all_sections	NPFM4	/home/angsuman/extra_spac/RNA_need_referance genome/fastp_qc/NPFM4_fastp_report.json

@@ -1,0 +1,5 @@
+Sample	PE mapped uniquely	PE mapped discordantly uniquely	PE one mate mapped uniquely	PE multimapped	PE one mate multimapped	PE neither mate aligned
+NPFM1_mapping_stats	9957228.0	55477.0	623285.0	5159471.0	240046.0	8498904.0
+NPFM2_mapping_stats	5224291.0	38483.0	438821.5	1369211.0	78601.0	6948720.5
+NPFM3_mapping_stats	3949196.0	29284.0	615950.5	1268849.0	131926.5	3066942.0
+NPFM4_mapping_stats	8790732.0	30781.0	530233.0	3827411.0	378806.5	6489784.5

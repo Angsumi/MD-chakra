@@ -1,0 +1,15 @@
+Status	alignments/NPFM1_sorted.bam	alignments/NPFM2_sorted.bam	alignments/NPFM3_sorted.bam	alignments/NPFM4_sorted.bam
+Assigned	13484065	6504822	2277452	13323621
+Unassigned_Unmapped	16997665	13897467	6134052	12979616
+Unassigned_Read_Type	0	0	0	0
+Unassigned_Singleton	0	0	0	0
+Unassigned_MappingQuality	0	0	0	0
+Unassigned_Chimera	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0
+Unassigned_Duplicate	0	0	0	0
+Unassigned_MultiMapping	31793338	8436521	8514925	27791755
+Unassigned_Secondary	0	0	0	0
+Unassigned_NonSplit	0	0	0	0
+Unassigned_NoFeatures	4835524	4083001	6492923	3543484
+Unassigned_Overlapping_Length	0	0	0	0
+Unassigned_Ambiguity	2951139	815740	418972	1836432

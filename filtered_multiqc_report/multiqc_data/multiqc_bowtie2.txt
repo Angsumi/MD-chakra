@@ -1,0 +1,5 @@
+Sample	total_reads	paired_total	paired_aligned_none	paired_aligned_one	paired_aligned_multi	paired_aligned_discord_one	paired_aligned_mate_none	paired_aligned_mate_one	paired_aligned_mate_multi	overall_alignment_rate	paired_aligned_mate_multi_halved	paired_aligned_mate_none_halved	paired_aligned_mate_one_halved
+NPFM1_mapping_stats	24534411	24534411	9417712	9957228	5159471	55477	16997808	1246570	480092	65.36	240046.0	8498904.0	623285.0
+NPFM2_mapping_stats	14098128	14098128	7504626	5224291	1369211	38483	13897441	877643	157202	50.71	78601.0	6948720.5	438821.5
+NPFM3_mapping_stats	9062148	9062148	3844103	3949196	1268849	29284	6133884	1231901	263853	66.16	131926.5	3066942.0	615950.5
+NPFM4_mapping_stats	20047748	20047748	7429605	8790732	3827411	30781	12979569	1060466	757613	67.63	378806.5	6489784.5	530233.0

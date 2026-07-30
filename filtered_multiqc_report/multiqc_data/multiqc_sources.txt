@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+Bowtie 2 / HiSAT2	all_sections	NPFM1_mapping_stats	/home/angsuman/extra_spac/RNA_need_referance genome/filtered_alignments/NPFM1_mapping_stats.txt
+Bowtie 2 / HiSAT2	all_sections	NPFM2_mapping_stats	/home/angsuman/extra_spac/RNA_need_referance genome/filtered_alignments/NPFM2_mapping_stats.txt
+Bowtie 2 / HiSAT2	all_sections	NPFM3_mapping_stats	/home/angsuman/extra_spac/RNA_need_referance genome/filtered_alignments/NPFM3_mapping_stats.txt
+Bowtie 2 / HiSAT2	all_sections	NPFM4_mapping_stats	/home/angsuman/extra_spac/RNA_need_referance genome/filtered_alignments/NPFM4_mapping_stats.txt
