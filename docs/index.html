@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcriptomic Analysis Results | MD Chakra</title>
+    <meta name="description" content="Transcriptomic expression profiling of 4 independent samples (NPFM1-4). Includes expression tables, pairwise fold-changes, and multivariate visualizations.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Transcriptomic Analysis Results</h1>
+        <p class="subtitle">Complete expression profiling of 4 independent samples (NPFM1-4). Download annotated expression tables, pairwise comparisons, and view multivariate clustering visualizations.</p>
+    </header>
+
+    <main>
+        <h2 class="section-title">Data Deliverables</h2>
+        <div class="grid">
+            
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Annotated Expression Table</h3>
+                    <span class="badge">.xlsx</span>
+                </div>
+                <p>The main expression profiling table for all 4 samples. Contains Gene IDs, Chromosomal coordinates, Gene Names, and Functional Descriptions.</p>
+                <div class="process">
+                    <strong>Generation Process:</strong>
+                    Raw reads were filtered for rRNA, mapped via Bowtie2, quantified with featureCounts, and merged with GTF annotations using Python pandas. Includes Average Expression, StdDev, and Z-scores across all 4 independent samples.
+                </div>
+                <a href="assets/9_Annotated_Expression_Table_Individual.xlsx" class="btn" download>Download Table</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Pairwise Fold-Changes</h3>
+                    <span class="badge">.xlsx</span>
+                </div>
+                <p>Calculated pairwise Log2 Fold-Changes between all combinations of the 4 independent samples (e.g., NPFM1 vs NPFM2) to observe relative changes without statistical group testing.</p>
+                <div class="process">
+                    <strong>Generation Process:</strong>
+                    Since biological replicates and control/treatment groups are absent, standard DESeq2 statistical testing was bypassed. Instead, Log2FC was calculated directly between each sample pair on FPKM-normalized values.
+                </div>
+                <a href="assets/10_Pairwise_Comparisons.xlsx" class="btn" download>Download Comparisons</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>FPKM Normalized Counts</h3>
+                    <span class="badge">.csv</span>
+                </div>
+                <p>Raw gene counts normalized for sequencing depth and gene length using Fragments Per Kilobase of transcript per Million mapped reads (FPKM).</p>
+                <div class="process">
+                    <strong>Generation Process:</strong>
+                    Using the DESeq2 R package, size factors were estimated treating all samples as independent (design = ~1). FPKM was calculated using the fpkm() function factoring in gene lengths from the GTF.
+                </div>
+                <a href="assets/6_FPKM_normalized_counts_individual.csv" class="btn" download>Download FPKM</a>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">Visualizations</h2>
+        <div class="grid">
+
+            <!-- Viz 1 -->
+            <div class="viz-card">
+                <div class="viz-img-container">
+                    <img src="assets/PCA_plot-1.png" alt="Principal Component Analysis Plot">
+                </div>
+                <div class="viz-content">
+                    <h3>PCA Plot</h3>
+                    <p>Principal Component Analysis based on Variance Stabilized Transformation (rlog) of the read counts. Demonstrates how the individual samples cluster along the two axes of highest variance.</p>
+                </div>
+            </div>
+
+            <!-- Viz 2 -->
+            <div class="viz-card">
+                <div class="viz-img-container">
+                    <img src="assets/Distance_Matrix-1.png" alt="Sample Distance Matrix">
+                </div>
+                <div class="viz-content">
+                    <h3>Sample Distance Matrix</h3>
+                    <p>Euclidean distance clustering of the 4 samples based on rlog-transformed counts. Darker colors represent greater similarity between samples.</p>
+                </div>
+            </div>
+
+            <!-- Viz 3 -->
+            <div class="viz-card">
+                <div class="viz-img-container">
+                    <img src="assets/Heatmap-1.png" alt="Top 50 Variable Genes Heatmap">
+                </div>
+                <div class="viz-content">
+                    <h3>Top 50 Variable Genes</h3>
+                    <p>A heatmap illustrating the expression patterns of the 50 genes with the highest variance across the 4 independent samples, highlighting specific expression signatures.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>MD Chakra Transcriptomics Pipeline &copy; 2026. Generated by Antigravity AI.</p>
+    </footer>
+
+</body>
+</html>
