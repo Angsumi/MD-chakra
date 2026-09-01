@@ -4,21 +4,239 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transcriptomic Analysis Results | MD Chakra</title>
-    <meta name="description" content="Transcriptomic expression profiling of 4 independent samples (NPFM1-4). Includes expression tables, pairwise fold-changes, and multivariate visualizations.">
+    <meta name="description" content="Transcriptomic expression profiling of 4 independent samples (NPFM1-4). Includes deliverables feasibility matrix, expression tables, pairwise fold-changes, and multivariate visualizations.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Transcriptomic Analysis Results</h1>
-        <p class="subtitle">Complete expression profiling of 4 independent samples (NPFM1-4). Download annotated expression tables, pairwise comparisons, and view multivariate clustering visualizations.</p>
+        <h1>Transcriptomic Analysis Portal</h1>
+        <p class="subtitle">Complete expression profiling and deliverables catalog for 4 independent samples (<strong>NPFM1</strong>, <strong>NPFM2</strong>, <strong>NPFM3</strong>, <strong>NPFM4</strong>) analyzed without biological replicates or pseudo-groups.</p>
         <div style="margin-top: 2rem;">
-            <a href="https://drive.google.com/drive/folders/1s6HS42fGcSoCgNkTawVGfZ5nhJUsGWVX?usp=drive_link" class="btn" target="_blank">Access Raw Data on Google Drive</a>
+            <a href="https://drive.google.com/drive/folders/1s6HS42fGcSoCgNkTawVGfZ5nhJUsGWVX?usp=drive_link" class="btn" target="_blank">Access Raw FASTQ & BAM on Google Drive</a>
         </div>
     </header>
 
     <main>
-        <h2 class="section-title">Data Deliverables</h2>
+
+        <!-- Section 1: Deliverables Feasibility & Download Table -->
+        <h2 class="section-title">Deliverables & Feasibility Matrix</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+            Comprehensive status breakdown and direct download directory for all 13 transcriptomic deliverables based on independent sample expression profiling.
+        </p>
+
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">#</th>
+                        <th style="width: 260px;">Deliverable / Requirement</th>
+                        <th style="width: 170px;">Feasibility Status</th>
+                        <th>Methodology & Analytical Implementation</th>
+                        <th style="width: 220px;">Download / Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Item 1 -->
+                    <tr>
+                        <td><strong>1</strong></td>
+                        <td>
+                            <strong>Raw & Processed FASTQ Files</strong>
+                            <div class="item-desc">Paired-end reads before & after adapter trimming</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>Trimmed with <code>fastp</code> (poly-G tail removal, adapter clipping, Q20/Q30 quality filtering) per sample.</td>
+                        <td>
+                            <a href="https://drive.google.com/drive/folders/1s6HS42fGcSoCgNkTawVGfZ5nhJUsGWVX?usp=drive_link" class="btn-sm btn-secondary" target="_blank">Google Drive (Raw)</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 2 -->
+                    <tr>
+                        <td><strong>2</strong></td>
+                        <td>
+                            <strong>QC Reports & rRNA Filtration</strong>
+                            <div class="item-desc">fastp summaries & ribosomal RNA depletion</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>SortMeRNA database indexing & Bowtie2 depletion (<code>--un-conc-gz</code>) with MultiQC report aggregation.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/raw_qc_multiqc_report.html" class="btn-sm" download>MultiQC QC Report</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 3 -->
+                    <tr>
+                        <td><strong>3</strong></td>
+                        <td>
+                            <strong>Filtered Mapping Statistics</strong>
+                            <div class="item-desc">Total Reads, Mapped %, Unique %, Multi %, Unmapped %</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>HISAT2 genomic alignment metrics for rRNA-depleted mRNA reads across NPFM1, NPFM2, NPFM3, and NPFM4.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/filtered_mapping_multiqc_report.html" class="btn-sm" download>MultiQC Alignment</a>
+                            <a href="/MD-chakra/assets/Table_1_Summary_Stats.csv" class="btn-sm btn-secondary" download>Table 1 CSV</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 4 -->
+                    <tr>
+                        <td><strong>4</strong></td>
+                        <td>
+                            <strong>Gene / Transcript Absolute Counts</strong>
+                            <div class="item-desc">Expression profiling, variability, PCA, and normalization</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>Quantified via <code>featureCounts</code> on genomic features; mapped to reference GTF locus IDs and gene symbols.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/gene_counts_with_names.xlsx" class="btn-sm" download>Counts (.xlsx)</a>
+                            <a href="/MD-chakra/assets/gene_counts.txt" class="btn-sm btn-secondary" download>Raw .txt</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 5 -->
+                    <tr>
+                        <td><strong>5</strong></td>
+                        <td>
+                            <strong>FPKM Normalized Counts</strong>
+                            <div class="item-desc">Depth and gene-length normalized expression</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>Calculated using <code>DESeq2::fpkm()</code> with intercept design (<code>design = ~1</code>) and GTF feature lengths.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/6_FPKM_normalized_counts_individual.csv" class="btn-sm" download>Download FPKM (.csv)</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 6 -->
+                    <tr>
+                        <td><strong>6</strong></td>
+                        <td>
+                            <strong>Principal Component Analysis (PCA)</strong>
+                            <div class="item-desc">Multivariate clustering across individual samples</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>Computed using variance-stabilized <code>rlog</code> transformed counts showing sample separation and variance axes.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/7_PCA_plot_individual.png" class="btn-sm" target="_blank">View PNG</a>
+                            <a href="/MD-chakra/assets/7_PCA_plot_individual.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 7 -->
+                    <tr>
+                        <td><strong>7</strong></td>
+                        <td>
+                            <strong>Sample Distance Matrix & Clustering</strong>
+                            <div class="item-desc">Euclidean distance heatmap & hierarchical tree</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>Sample-to-sample Euclidean distances calculated on <code>rlog</code> counts with hierarchical clustering.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/8_Sample_Distance_Matrix_individual.png" class="btn-sm" target="_blank">View PNG</a>
+                            <a href="/MD-chakra/assets/8_Sample_Distance_Matrix_individual.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 8 -->
+                    <tr>
+                        <td><strong>8</strong></td>
+                        <td>
+                            <strong>Upregulated & Downregulated Gene Lists</strong>
+                            <div class="item-desc">Standard DEG classification sets</div>
+                        </td>
+                        <td><span class="badge-danger">✖ Not Statistically Valid</span></td>
+                        <td>Standard DEG classification requires replicate groups. <strong>Replaced by pairwise Log2FC comparisons between all sample pairs.</strong></td>
+                        <td>
+                            <a href="/MD-chakra/assets/10_Pairwise_Comparisons.xlsx" class="btn-sm" download>Pairwise Log2FC (.xlsx)</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 9 -->
+                    <tr>
+                        <td><strong>9</strong></td>
+                        <td>
+                            <strong>Master Annotated Expression Table</strong>
+                            <div class="item-desc">Gene ID, Chr, Name, Description, S1..S4, Avg, StdDev, Z-scores</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>Primary profiling deliverable: incorporates FPKM expression, mean, variance, and row Z-scores across all 4 samples.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/9_Annotated_Expression_Table_Individual.xlsx" class="btn-sm" download>Download Master (.xlsx)</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 10 -->
+                    <tr>
+                        <td><strong>10</strong></td>
+                        <td>
+                            <strong>Detailed Coordinate & Fold-Change Table</strong>
+                            <div class="item-desc">Coords, counts, FC, Log2FC (without p-value/FDR)</div>
+                        </td>
+                        <td><span class="badge-warning">⚠ Partially Possible</span></td>
+                        <td>All coordinates, counts, pairwise FC, and Log2FC are fully computed. Unadjusted & adjusted p-values (FDR) are omitted.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/10_Pairwise_Comparisons.xlsx" class="btn-sm" download>Download Table (.xlsx)</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 11 -->
+                    <tr>
+                        <td><strong>11</strong></td>
+                        <td>
+                            <strong>Top 50 Most Variable Genes Heatmap</strong>
+                            <div class="item-desc">Heatmap of highest variance genes across samples</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>Top 50 genes selected by row variance across normalized counts; visualized using standardized row Z-scores.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/11_Heatmap_Top50_Variable_individual.png" class="btn-sm" target="_blank">View PNG</a>
+                            <a href="/MD-chakra/assets/11_Heatmap_Top50_Variable_individual.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                        </td>
+                    </tr>
+
+                    <!-- Item 12 -->
+                    <tr>
+                        <td><strong>12</strong></td>
+                        <td>
+                            <strong>MA Plot</strong>
+                            <div class="item-desc">Statistical significance vs Log2FC scatter</div>
+                        </td>
+                        <td><span class="badge-danger">✖ Not Statistically Valid</span></td>
+                        <td>Requires two-group differential testing to calculate significance and colors. Bypassed in favor of PCA and distance matrices.</td>
+                        <td><span class="btn-sm btn-na">N/A (Bypassed)</span></td>
+                    </tr>
+
+                    <!-- Item 13 -->
+                    <tr>
+                        <td><strong>13</strong></td>
+                        <td>
+                            <strong>Volcano Plot</strong>
+                            <div class="item-desc">-Log10(p-value) vs Log2FC scatter plot</div>
+                        </td>
+                        <td><span class="badge-danger">✖ Not Statistically Valid</span></td>
+                        <td>Requires statistical p-values on the Y-axis. Impossible without biological replicates or control/treatment grouping.</td>
+                        <td><span class="btn-sm btn-na">N/A (Bypassed)</span></td>
+                    </tr>
+
+                    <!-- Cutoff Note -->
+                    <tr>
+                        <td><strong>Note</strong></td>
+                        <td>
+                            <strong>6 Statistical Cutoff Filters</strong>
+                            <div class="item-desc">FDR &lt; 0.05, p &lt; 0.05 & Log2FC 1.0/1.5/2.0</div>
+                        </td>
+                        <td><span class="badge-danger">✖ Not Applicable</span></td>
+                        <td>Statistical hypothesis cutoffs cannot be calculated without replicate groups. Pairwise fold changes are provided unabridged.</td>
+                        <td><span class="btn-sm btn-na">N/A (Bypassed)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 2: Core Data Deliverables Cards -->
+        <h2 class="section-title">Core Deliverable Highlights</h2>
         <div class="grid">
             
             <!-- Card 1 -->
@@ -27,12 +245,12 @@
                     <h3>Annotated Expression Table</h3>
                     <span class="badge">.xlsx</span>
                 </div>
-                <p>The main expression profiling table for all 4 samples. Contains Gene IDs, Chromosomal coordinates, Gene Names, and Functional Descriptions.</p>
+                <p>The master expression profiling matrix for all 4 samples. Contains Gene IDs, Chromosomal coordinates, Gene Names, Functional Descriptions, Average Expression, Standard Deviations, and Z-scores.</p>
                 <div class="process">
                     <strong>Generation Process:</strong>
-                    Raw reads were filtered for rRNA, mapped via Bowtie2, quantified with featureCounts, and merged with GTF annotations using Python pandas. Includes Average Expression, StdDev, and Z-scores across all 4 independent samples.
+                    Quantified with featureCounts, normalized for sequencing depth and gene length, and merged with GTF attributes via pandas.
                 </div>
-                <a href="/MD-chakra/assets/9_Annotated_Expression_Table_Individual.xlsx" class="btn" download>Download Table</a>
+                <a href="/MD-chakra/assets/9_Annotated_Expression_Table_Individual.xlsx" class="btn" download>Download Master Table</a>
             </div>
 
             <!-- Card 2 -->
@@ -41,12 +259,12 @@
                     <h3>Pairwise Fold-Changes</h3>
                     <span class="badge">.xlsx</span>
                 </div>
-                <p>Calculated pairwise Log2 Fold-Changes between all combinations of the 4 independent samples (e.g., NPFM1 vs NPFM2) to observe relative changes without statistical group testing.</p>
+                <p>Pairwise Log2 Fold-Changes between all combinations of the 4 independent samples (e.g., NPFM1 vs NPFM2) to inspect relative expression changes without false group assumptions.</p>
                 <div class="process">
                     <strong>Generation Process:</strong>
-                    Since biological replicates and control/treatment groups are absent, standard DESeq2 statistical testing was bypassed. Instead, Log2FC was calculated directly between each sample pair on FPKM-normalized values.
+                    Direct logarithmic ratios calculated on FPKM-normalized values with pseudocounts across all 6 pairwise combinations.
                 </div>
-                <a href="/MD-chakra/assets/10_Pairwise_Comparisons.xlsx" class="btn" download>Download Comparisons</a>
+                <a href="/MD-chakra/assets/10_Pairwise_Comparisons.xlsx" class="btn" download>Download Pairwise Comparisons</a>
             </div>
 
             <!-- Card 3 -->
@@ -55,17 +273,18 @@
                     <h3>FPKM Normalized Counts</h3>
                     <span class="badge">.csv</span>
                 </div>
-                <p>Raw gene counts normalized for sequencing depth and gene length using Fragments Per Kilobase of transcript per Million mapped reads (FPKM).</p>
+                <p>Gene counts normalized for sequencing depth and gene length using Fragments Per Kilobase of transcript per Million mapped reads (FPKM).</p>
                 <div class="process">
                     <strong>Generation Process:</strong>
-                    Using the DESeq2 R package, size factors were estimated treating all samples as independent (design = ~1). FPKM was calculated using the fpkm() function factoring in gene lengths from the GTF.
+                    Estimated size factors with DESeq2 treating samples as independent (<code>design = ~1</code>) factoring in feature lengths.
                 </div>
-                <a href="/MD-chakra/assets/6_FPKM_normalized_counts_individual.csv" class="btn" download>Download FPKM</a>
+                <a href="/MD-chakra/assets/6_FPKM_normalized_counts_individual.csv" class="btn" download>Download FPKM CSV</a>
             </div>
 
         </div>
 
-        <h2 class="section-title">Visualizations</h2>
+        <!-- Section 3: Visualizations -->
+        <h2 class="section-title">Multivariate Visualizations</h2>
         <div class="grid">
 
             <!-- Viz 1 -->
@@ -75,7 +294,10 @@
                 </div>
                 <div class="viz-content">
                     <h3>PCA Plot</h3>
-                    <p>Principal Component Analysis based on Variance Stabilized Transformation (rlog) of the read counts. Demonstrates how the individual samples cluster along the two axes of highest variance.</p>
+                    <p>Principal Component Analysis based on Variance Stabilized Transformation (rlog) of read counts. Demonstrates how individual samples cluster along the primary axes of variance.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="/MD-chakra/assets/7_PCA_plot_individual.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                    </div>
                 </div>
             </div>
 
@@ -86,7 +308,10 @@
                 </div>
                 <div class="viz-content">
                     <h3>Sample Distance Matrix</h3>
-                    <p>Euclidean distance clustering of the 4 samples based on rlog-transformed counts. Darker colors represent greater similarity between samples.</p>
+                    <p>Euclidean distance clustering of the 4 samples based on rlog-transformed counts. Darker blue colors represent greater transcriptional similarity.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="/MD-chakra/assets/8_Sample_Distance_Matrix_individual.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                    </div>
                 </div>
             </div>
 
@@ -97,18 +322,21 @@
                 </div>
                 <div class="viz-content">
                     <h3>Top 50 Variable Genes</h3>
-                    <p>A heatmap illustrating the expression patterns of the 50 genes with the highest variance across the 4 independent samples, highlighting specific expression signatures.</p>
+                    <p>Heatmap illustrating the expression patterns of the 50 genes with the highest variance across the 4 samples, scaled by row Z-scores.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="/MD-chakra/assets/11_Heatmap_Top50_Variable_individual.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                    </div>
                 </div>
             </div>
             
             <!-- Viz 4 -->
             <div class="viz-card">
                 <div class="viz-img-container">
-                    <img src="/MD-chakra/assets/GO_Classification_with_ontology_labels.png" alt="GO Classification (With Labels)">
+                    <img src="/MD-chakra/assets/GO_Classification_with_ontology_labels.png" alt="GO Classification Plot">
                 </div>
                 <div class="viz-content">
                     <h3>GO Classification</h3>
-                    <p>Gene Ontology (GO) classification bar chart, displaying the percentage and count of all unigenes versus Differentially Expressed Genes (DEGs).</p>
+                    <p>Gene Ontology (GO) classification bar chart displaying unigene percentages and counts across Biological Process, Cellular Component, and Molecular Function.</p>
                 </div>
             </div>
 

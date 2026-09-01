@@ -46,7 +46,9 @@ fig_go = px.bar(df_go_melt, x='Description', y='Percentage_Plot', color='Categor
                 color_discrete_map=color_map,
                 log_y=True,
                 hover_data=['Percentage', 'Count'],
-                height=800, width=1400)
+                height=900, width=2600)
+
+fig_go.update_traces(marker_line_color='black', marker_line_width=0.8)
 
 fig_go.update_layout(
     title='',
@@ -57,7 +59,7 @@ fig_go.update_layout(
     paper_bgcolor='white',
     font_color='black',
     showlegend=False,
-    bargap=0.1,
+    bargap=0.0,
     bargroupgap=0.0,
     margin=dict(b=200, r=150, t=50, l=100)
 )
@@ -137,4 +139,5 @@ add_bracket(fig_go, df_go, 'Cellular Component', 'cellular component', 'black')
 add_bracket(fig_go, df_go, 'Molecular Function', 'molecular function', 'black')
 
 fig_go.write_image("GO_Classification_with_ontology_labels.png", scale=2)
+fig_go.write_image("test_go.png", scale=2)
 print("Done")

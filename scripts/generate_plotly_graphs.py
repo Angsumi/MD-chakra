@@ -120,8 +120,10 @@ if os.path.exists(go_csv):
                     color_discrete_map=color_map,
                     log_y=True,
                     hover_data=['Percentage', 'Count'],
-                    height=1400, width=1800)
+                    height=900, width=2600)
     
+    fig_go.update_traces(marker_line_color='black', marker_line_width=0.8)
+
     fig_go.update_layout(
         title='',
         xaxis_tickangle=-60,
@@ -131,7 +133,7 @@ if os.path.exists(go_csv):
         paper_bgcolor='white',
         font_color='black',
         showlegend=False,
-        bargap=0.1,
+        bargap=0.0,
         bargroupgap=0.0,
         margin=dict(b=600, r=150, t=50, l=100)
     )
