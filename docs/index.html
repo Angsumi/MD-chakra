@@ -246,14 +246,14 @@
                         <td><strong>📊</strong></td>
                         <td>
                             <strong>Expression Distribution Analysis</strong>
-                            <div class="item-desc">Boxplots, violin plots, KDE density profiles, and cumulative CPM curves</div>
+                            <div class="item-desc">Tukey boxplots, violin plots, KDE density profiles, and cumulative CPM curves</div>
                         </td>
                         <td><span class="badge-success">✔ Fully Possible</span></td>
                         <td>Cross-sample comparability testing: verifies normalization across NPFM1–NPFM4, dynamic range, and gene detection saturation.</td>
                         <td>
                             <a href="/MD-chakra/assets/Expression_Distribution_Threshold_Stats.xlsx" class="btn-sm" download>Stats (.xlsx)</a>
-                            <a href="/MD-chakra/assets/CPM_normalized_counts_individual.csv" class="btn-sm btn-secondary" download>CPM (.csv)</a>
                             <a href="/MD-chakra/assets/12_Expression_Distribution_Boxplot.png" class="btn-sm" target="_blank">Boxplot</a>
+                            <a href="/MD-chakra/assets/12b_Expression_Distribution_Violin.png" class="btn-sm btn-secondary" target="_blank">Violin</a>
                             <a href="/MD-chakra/assets/13_Expression_Density_Plot.png" class="btn-sm btn-secondary" target="_blank">Density</a>
                         </td>
                     </tr>
@@ -381,16 +381,30 @@
                 </div>
             </div>
 
-            <!-- Viz 5: Expression Boxplot & Violin -->
+            <!-- Viz 5: Classic Tukey Boxplot -->
             <div class="viz-card">
                 <div class="viz-img-container">
-                    <img src="/MD-chakra/assets/12_Expression_Distribution_Boxplot.png" alt="Expression Distribution Boxplot">
+                    <img src="/MD-chakra/assets/12_Expression_Distribution_Boxplot.png" alt="Log2-Expression Boxplot">
                 </div>
                 <div class="viz-content">
-                    <h3>Log2-Expression Distribution (Boxplot & Violin)</h3>
-                    <p>Demonstrates global comparability of log2(FPKM + 1) distributions across NPFM1–NPFM4, confirming consistent median expression and interquartile dynamic range.</p>
+                    <h3>Log2-Expression Boxplot</h3>
+                    <p>Classic Tukey boxplot displaying median (solid line), mean (dashed line), 25th–75th interquartile range (IQR), and whiskers of log2(FPKM + 1) across NPFM1–NPFM4.</p>
                     <div style="margin-top: 1rem;">
                         <a href="/MD-chakra/assets/12_Expression_Distribution_Boxplot.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Viz 5b: Standalone Violin Plot -->
+            <div class="viz-card">
+                <div class="viz-img-container">
+                    <img src="/MD-chakra/assets/12b_Expression_Distribution_Violin.png" alt="Log2-Expression Violin Distributions">
+                </div>
+                <div class="viz-content">
+                    <h3>Log2-Expression Violin Plot</h3>
+                    <p>Continuous violin density profiles demonstrating matching multi-modal distribution dynamics and median levels across all 4 independent libraries.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="/MD-chakra/assets/12b_Expression_Distribution_Violin.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
                     </div>
                 </div>
             </div>
