@@ -208,7 +208,11 @@ python3 scripts/test_plotly_go.py
 | **Top 50 Variable Genes Table** | [`downstream_results/Top_50_Variable_Genes_Annotated.xlsx`](file:///home/angsuman/extra_spac/MD%20chakra/downstream_results/Top_50_Variable_Genes_Annotated.xlsx) | Dedicated table of the 50 most variable genes across samples with variance, standard deviation, and Z-scores. |
 | **Top 50 & 100 Highly Expressed Genes** | [`downstream_results/Top_50_Highly_Expressed_Genes.xlsx`](file:///home/angsuman/extra_spac/MD%20chakra/downstream_results/Top_50_Highly_Expressed_Genes.xlsx) | Annotated tables of the top 50 and top 100 highest expressing genes ranked by mean FPKM expression. |
 | **Top 50 Variable Heatmap** | [`visualizations/11_Heatmap_Top50_Variable_individual.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/11_Heatmap_Top50_Variable_individual.png) | Row Z-score normalized heatmap for the 50 most variable genes across samples. |
+| **Expression Distribution Boxplot** | [`visualizations/12_Expression_Distribution_Boxplot.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/12_Expression_Distribution_Boxplot.png) | Log2-expression violin and boxplot showing comparable medians and dynamic ranges across all samples. |
+| **Expression Density Curves (KDE)** | [`visualizations/13_Expression_Density_Plot.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/13_Expression_Density_Plot.png) | Kernel Density Estimation showing global distribution concordance across NPFM1–NPFM4. |
+| **Cumulative CPM Read Distribution** | [`visualizations/14_Cumulative_CPM_Distribution.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/14_Cumulative_CPM_Distribution.png) | Cumulative read percentage curve across ranked unigenes assessing library complexity. |
 | **GO Classification Plot** | [`visualizations/GO_Classification_with_ontology_labels.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/GO_Classification_with_ontology_labels.png) | Gene Ontology classification bar chart categorized by BP, CC, and MF. |
+
 
 
 ---

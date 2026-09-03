@@ -241,6 +241,23 @@
                         </td>
                     </tr>
 
+                    <!-- Expression Distribution Analysis -->
+                    <tr>
+                        <td><strong>📊</strong></td>
+                        <td>
+                            <strong>Expression Distribution Analysis</strong>
+                            <div class="item-desc">Boxplots, violin plots, KDE density profiles, and cumulative CPM curves</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>Cross-sample comparability testing: verifies normalization across NPFM1–NPFM4, dynamic range, and gene detection saturation.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/Expression_Distribution_Threshold_Stats.xlsx" class="btn-sm" download>Stats (.xlsx)</a>
+                            <a href="/MD-chakra/assets/CPM_normalized_counts_individual.csv" class="btn-sm btn-secondary" download>CPM (.csv)</a>
+                            <a href="/MD-chakra/assets/12_Expression_Distribution_Boxplot.png" class="btn-sm" target="_blank">Boxplot</a>
+                            <a href="/MD-chakra/assets/13_Expression_Density_Plot.png" class="btn-sm btn-secondary" target="_blank">Density</a>
+                        </td>
+                    </tr>
+
                     <!-- Cutoff Note -->
                     <tr>
                         <td><strong>Note</strong></td>
@@ -361,6 +378,48 @@
                 <div class="viz-content">
                     <h3>GO Classification</h3>
                     <p>Gene Ontology (GO) classification bar chart displaying unigene percentages and counts across Biological Process, Cellular Component, and Molecular Function.</p>
+                </div>
+            </div>
+
+            <!-- Viz 5: Expression Boxplot & Violin -->
+            <div class="viz-card">
+                <div class="viz-img-container">
+                    <img src="/MD-chakra/assets/12_Expression_Distribution_Boxplot.png" alt="Expression Distribution Boxplot">
+                </div>
+                <div class="viz-content">
+                    <h3>Log2-Expression Distribution (Boxplot & Violin)</h3>
+                    <p>Demonstrates global comparability of log2(FPKM + 1) distributions across NPFM1–NPFM4, confirming consistent median expression and interquartile dynamic range.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="/MD-chakra/assets/12_Expression_Distribution_Boxplot.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Viz 6: Density Plot (KDE) -->
+            <div class="viz-card">
+                <div class="viz-img-container">
+                    <img src="/MD-chakra/assets/13_Expression_Density_Plot.png" alt="Expression Density Distribution KDE">
+                </div>
+                <div class="viz-content">
+                    <h3>Expression Density Distributions (KDE)</h3>
+                    <p>Kernel Density Estimation curves displaying matching multi-modal expression profiles across all 4 independent libraries.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="/MD-chakra/assets/13_Expression_Density_Plot.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Viz 7: Cumulative CPM Distribution -->
+            <div class="viz-card">
+                <div class="viz-img-container">
+                    <img src="/MD-chakra/assets/14_Cumulative_CPM_Distribution.png" alt="Cumulative CPM Read Fraction">
+                </div>
+                <div class="viz-content">
+                    <h3>Cumulative CPM Read Fraction (Library Diversity)</h3>
+                    <p>Quantifies library complexity and transcript diversity, tracking the cumulative proportion of sequencing depth consumed across ranked unigenes.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="/MD-chakra/assets/14_Cumulative_CPM_Distribution.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                    </div>
                 </div>
             </div>
 
