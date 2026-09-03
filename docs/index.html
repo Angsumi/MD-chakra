@@ -185,14 +185,16 @@
                     <tr>
                         <td><strong>11</strong></td>
                         <td>
-                            <strong>Top 50 Most Variable Genes Heatmap</strong>
-                            <div class="item-desc">Heatmap of highest variance genes across samples</div>
+                            <strong>Top 50 Most Variable Genes Heatmap & Table</strong>
+                            <div class="item-desc">Heatmap & annotated data table of highest variance genes</div>
                         </td>
                         <td><span class="badge-success">✔ Fully Possible</span></td>
-                        <td>Top 50 genes selected by row variance across normalized counts; visualized using standardized row Z-scores.</td>
+                        <td>Top 50 genes selected by row variance across normalized counts; visualized using standardized row Z-scores with dedicated annotated tables.</td>
                         <td>
+                            <a href="/MD-chakra/assets/Top_50_Variable_Genes_Annotated.xlsx" class="btn-sm" download>Table (.xlsx)</a>
+                            <a href="/MD-chakra/assets/Top_50_Variable_Genes_Annotated.csv" class="btn-sm btn-secondary" download>Table (.csv)</a>
                             <a href="/MD-chakra/assets/11_Heatmap_Top50_Variable_individual.png" class="btn-sm" target="_blank">View PNG</a>
-                            <a href="/MD-chakra/assets/11_Heatmap_Top50_Variable_individual.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                            <a href="/MD-chakra/assets/11_Heatmap_Top50_Variable_individual.pdf" class="btn-sm btn-secondary" download>PDF</a>
                         </td>
                     </tr>
 
@@ -218,6 +220,23 @@
                         <td><span class="badge-danger">✖ Not Statistically Valid</span></td>
                         <td>Requires statistical p-values on the Y-axis. Impossible without biological replicates or control/treatment grouping.</td>
                         <td><span class="btn-sm btn-na">N/A (Bypassed)</span></td>
+                    </tr>
+
+                    <!-- Top Expressed Genes -->
+                    <tr>
+                        <td><strong>⭐</strong></td>
+                        <td>
+                            <strong>Top Highly Expressed Genes Tables</strong>
+                            <div class="item-desc">Top 50 & Top 100 highest expressing genes ranked by mean FPKM</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>Identifies dominant basal and structural transcripts across NPFM1–NPFM4 with complete gene annotation and expression metrics.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/Top_50_Highly_Expressed_Genes.xlsx" class="btn-sm" download>Top 50 (.xlsx)</a>
+                            <a href="/MD-chakra/assets/Top_50_Highly_Expressed_Genes.csv" class="btn-sm btn-secondary" download>(.csv)</a>
+                            <a href="/MD-chakra/assets/Top_100_Highly_Expressed_Genes.xlsx" class="btn-sm" download>Top 100 (.xlsx)</a>
+                            <a href="/MD-chakra/assets/Top_100_Highly_Expressed_Genes.csv" class="btn-sm btn-secondary" download>(.csv)</a>
+                        </td>
                     </tr>
 
                     <!-- Cutoff Note -->

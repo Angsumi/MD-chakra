@@ -205,8 +205,11 @@ python3 scripts/test_plotly_go.py
 | **FPKM Normalized Matrix** | [`downstream_results/6_FPKM_normalized_counts_individual.csv`](file:///home/angsuman/extra_spac/MD%20chakra/downstream_results/6_FPKM_normalized_counts_individual.csv) | Depth- and gene length-normalized expression values for all 4 samples. |
 | **PCA Clustering Plot** | [`visualizations/7_PCA_plot_individual.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/7_PCA_plot_individual.png) | 2D Principal Component Analysis based on rlog counts displaying sample separation. |
 | **Sample Distance Matrix** | [`visualizations/8_Sample_Distance_Matrix_individual.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/8_Sample_Distance_Matrix_individual.png) | Euclidean distance heatmap with hierarchical clustering. |
+| **Top 50 Variable Genes Table** | [`downstream_results/Top_50_Variable_Genes_Annotated.xlsx`](file:///home/angsuman/extra_spac/MD%20chakra/downstream_results/Top_50_Variable_Genes_Annotated.xlsx) | Dedicated table of the 50 most variable genes across samples with variance, standard deviation, and Z-scores. |
+| **Top 50 & 100 Highly Expressed Genes** | [`downstream_results/Top_50_Highly_Expressed_Genes.xlsx`](file:///home/angsuman/extra_spac/MD%20chakra/downstream_results/Top_50_Highly_Expressed_Genes.xlsx) | Annotated tables of the top 50 and top 100 highest expressing genes ranked by mean FPKM expression. |
 | **Top 50 Variable Heatmap** | [`visualizations/11_Heatmap_Top50_Variable_individual.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/11_Heatmap_Top50_Variable_individual.png) | Row Z-score normalized heatmap for the 50 most variable genes across samples. |
 | **GO Classification Plot** | [`visualizations/GO_Classification_with_ontology_labels.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/GO_Classification_with_ontology_labels.png) | Gene Ontology classification bar chart categorized by BP, CC, and MF. |
+
 
 ---
 
