@@ -163,7 +163,8 @@
                         <td><span class="badge-success">✔ Fully Possible</span></td>
                         <td>Primary profiling deliverable: incorporates FPKM expression, mean, variance, and row Z-scores across all 4 samples.</td>
                         <td>
-                            <a href="/MD-chakra/assets/9_Annotated_Expression_Table_Individual.xlsx" class="btn-sm" download>Download Master (.xlsx)</a>
+                            <a href="/MD-chakra/assets/9_Annotated_Expression_Table_Individual.xlsx" class="btn-sm" download>Master (.xlsx)</a>
+                            <a href="/MD-chakra/assets/9_Annotated_Expression_Table_Individual.csv" class="btn-sm btn-secondary" download>Master (.csv)</a>
                         </td>
                     </tr>
 
@@ -189,10 +190,11 @@
                             <div class="item-desc">Heatmap & annotated data table of highest variance genes</div>
                         </td>
                         <td><span class="badge-success">✔ Fully Possible</span></td>
-                        <td>Top 50 genes selected by row variance across normalized counts; visualized using standardized row Z-scores with dedicated annotated tables.</td>
+                        <td>Top 50 genes selected by row variance across normalized counts; visualized using standardized row Z-scores with dedicated annotated tables and raw Z-score matrix.</td>
                         <td>
                             <a href="/MD-chakra/assets/Top_50_Variable_Genes_Annotated.xlsx" class="btn-sm" download>Table (.xlsx)</a>
                             <a href="/MD-chakra/assets/Top_50_Variable_Genes_Annotated.csv" class="btn-sm btn-secondary" download>Table (.csv)</a>
+                            <a href="/MD-chakra/assets/plotly_heatmap_top50_data.csv" class="btn-sm btn-secondary" download>Raw Z-scores (.csv)</a>
                             <a href="/MD-chakra/assets/11_Heatmap_Top50_Variable_individual.png" class="btn-sm" target="_blank">View PNG</a>
                             <a href="/MD-chakra/assets/11_Heatmap_Top50_Variable_individual.pdf" class="btn-sm btn-secondary" download>PDF</a>
                         </td>
@@ -269,7 +271,10 @@
                     <strong>Generation Process:</strong>
                     Quantified with featureCounts, normalized for sequencing depth and gene length, and merged with GTF attributes via pandas.
                 </div>
-                <a href="/MD-chakra/assets/9_Annotated_Expression_Table_Individual.xlsx" class="btn" download>Download Master Table</a>
+                <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+                    <a href="/MD-chakra/assets/9_Annotated_Expression_Table_Individual.xlsx" class="btn" style="flex: 1;" download>Master (.xlsx)</a>
+                    <a href="/MD-chakra/assets/9_Annotated_Expression_Table_Individual.csv" class="btn btn-secondary" style="flex: 1;" download>Master (.csv)</a>
+                </div>
             </div>
 
             <!-- Card 2 -->
