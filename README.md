@@ -213,6 +213,7 @@ python3 scripts/test_plotly_go.py
 | **Expression Density Curves (KDE)** | [`visualizations/13_Expression_Density_Plot.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/13_Expression_Density_Plot.png) | Kernel Density Estimation showing global distribution concordance across NPFM1–NPFM4. |
 | **Cumulative CPM Read Distribution** | [`visualizations/14_Cumulative_CPM_Distribution.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/14_Cumulative_CPM_Distribution.png) | Cumulative read percentage curve across ranked unigenes assessing library complexity. |
 | **GO Classification Plot** | [`visualizations/GO_Classification_with_ontology_labels.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/GO_Classification_with_ontology_labels.png) | Gene Ontology classification bar chart categorized by BP, CC, and MF. |
+| **GO Classification Dataset** | [`processed_data/Figure2_GO_Classification_Data.csv`](file:///home/angsuman/extra_spac/MD%20chakra/processed_data/Figure2_GO_Classification_Data.csv) | Full GO term breakdown data table with unigene counts and percentages across BP, CC, and MF. |
 
 
 

@@ -1,0 +1,38 @@
+Ontology,Description,All Unigene,DEG Unigene
+Biological Process,cellular process,24207.0,183.0
+Biological Process,biological regulation,21433.0,94.0
+Biological Process,developmental process,4330.0,4.0
+Biological Process,localization,3634.0,34.0
+Biological Process,response to stimulus,3605.0,18.0
+Biological Process,multicellular organismal process,1331.0,16.0
+Biological Process,homeostatic process,599.0,6.0
+Biological Process,immune system process,230.0,6.0
+Biological Process,reproductive process,153.0,7.0
+Biological Process,biological process involved in interspecies interaction between organisms,148.0,6.0
+Biological Process,viral process,134.0,0.0
+Biological Process,growth,88.0,0.0
+Biological Process,rhythmic process,41.0,0.0
+Biological Process,locomotion,40.0,0.0
+Biological Process,biological process involved in intraspecies interaction between organisms,26.0,0.0
+Biological Process,pigmentation,16.0,0.0
+Biological Process,detoxification,10.0,0.0
+Cellular Component,cellular anatomical structure,52019.0,208.0
+Cellular Component,protein-containing complex,9381.0,12.0
+Molecular Function,binding,20009.0,96.0
+Molecular Function,catalytic activity,13612.0,162.0
+Molecular Function,transporter activity,2524.0,15.0
+Molecular Function,transcription regulator activity,1594.0,0.0
+Molecular Function,molecular function regulator activity,1367.0,6.0
+Molecular Function,molecular adaptor activity,700.0,1.0
+Molecular Function,structural molecule activity,653.0,0.0
+Molecular Function,molecular transducer activity,619.0,7.0
+Molecular Function,ATP-dependent activity,453.0,0.0
+Molecular Function,molecular carrier activity,264.0,0.0
+Molecular Function,translation factor activity,149.0,0.0
+Molecular Function,cargo receptor activity,75.0,4.0
+Molecular Function,protein folding chaperone,61.0,0.0
+Molecular Function,general transcription initiation factor activity,60.0,0.0
+Molecular Function,antioxidant activity,55.0,0.0
+Molecular Function,molecular sequestering activity,46.0,0.0
+Molecular Function,electron transfer activity,42.0,0.0
+Molecular Function,translation regulator activity,36.0,0.0
