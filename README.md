@@ -217,6 +217,8 @@ python3 scripts/test_plotly_go.py
 | **KEGG Master Annotation Table** | [`downstream_results/KEGG_Pathway_Annotation_Master.xlsx`](file:///home/angsuman/extra_spac/MD%20chakra/downstream_results/KEGG_Pathway_Annotation_Master.xlsx) | Master table of 31,649 annotated unigenes with KEGG Orthology (KO), pathway maps, EC numbers, and sample FPKMs. |
 | **KEGG Pathway Classification Plot** | [`visualizations/15_KEGG_Pathway_Classification.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/15_KEGG_Pathway_Classification.png) | Horizontal bar chart of top 20 represented biological and signaling KEGG pathways. |
 | **KEGG Pathway Dotplot** | [`visualizations/16_KEGG_Pathway_Dotplot.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/16_KEGG_Pathway_Dotplot.png) | Multi-dimensional pathway representation bubble chart. |
+| **Protein Domain Master Table** | [`downstream_results/Protein_Domain_Annotation_Master.xlsx`](file:///home/angsuman/extra_spac/MD%20chakra/downstream_results/Protein_Domain_Annotation_Master.xlsx) | Master table of 28,106 transcripts with Pfam protein domains, alignment stats, and FPKM expression. |
+| **Protein Domain Classification Plot** | [`visualizations/17_Protein_Domain_Classification.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/17_Protein_Domain_Classification.png) | High-resolution publication bar chart categorizing domains into Toxins, Proteases, Ion Channels, Binding, Enzymes, and Extracellular. |
 
 
 
