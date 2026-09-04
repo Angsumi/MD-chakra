@@ -1,0 +1,7 @@
+Biological_Process,Candidate_Genes_Count,Mean_Expression_FPKM,Top_Pfam_Domains,Top_KEGG_Pathways,Key_Expressed_Candidates
+Digestion,1077,0.72,"Trypsin, Astacin, Lipase","map01100, ko01100, ko04972","NPIL_134931, NPIL_308191, NPIL_414801, NPIL_135541, NPIL_629851"
+Detoxification,868,0.31,"p450, ABC_tran, SSF","map01100, ko01100, ko00480","NPIL_676491, NPIL_29711, NPIL_67851, NPIL_684011, NPIL_75891"
+Sex determination,6050,8.67,"RVT_1, rve, Peptidase_A17","map01100, ko01100, map05200","NPIL_338921, NPIL_15371, NPIL_337711, NPIL_473461, NPIL_132381"
+Immunity,568,2.65,"LRR_8, Serpin, Fibrinogen_C","ko04145, map04145, ko04210","NPIL_512651, NPIL_301681, NPIL_148061, NPIL_199481, NPIL_408301"
+Silk production,1357,1.08,"fn3, Chitin_bind_4, I-set","ko04141, map04141, map04510","NPIL_301681, NPIL_690061, NPIL_292461, NPIL_7811, NPIL_134931"
+Toxin biogenesis,727,17.43,"Ank_2, Ank_4, Kunitz_BPTI","ko04020, map04020, ko04024","NPIL_465141, NPIL_512651, NPIL_499111, NPIL_595141, NPIL_427091"

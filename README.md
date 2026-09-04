@@ -219,6 +219,9 @@ python3 scripts/test_plotly_go.py
 | **KEGG Pathway Dotplot** | [`visualizations/16_KEGG_Pathway_Dotplot.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/16_KEGG_Pathway_Dotplot.png) | Multi-dimensional pathway representation bubble chart. |
 | **Protein Domain Master Table** | [`downstream_results/Protein_Domain_Annotation_Master.xlsx`](file:///home/angsuman/extra_spac/MD%20chakra/downstream_results/Protein_Domain_Annotation_Master.xlsx) | Master table of 28,106 transcripts with Pfam protein domains, alignment stats, and FPKM expression. |
 | **Protein Domain Classification Plot** | [`visualizations/17_Protein_Domain_Classification.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/17_Protein_Domain_Classification.png) | High-resolution publication bar chart categorizing domains into Toxins, Proteases, Ion Channels, Binding, Enzymes, and Extracellular. |
+| **Targeted Processes Candidate Genes Table** | [`downstream_results/Targeted_Biological_Processes_Candidate_Genes.xlsx`](file:///home/angsuman/extra_spac/MD%20chakra/downstream_results/Targeted_Biological_Processes_Candidate_Genes.xlsx) | Multi-sheet master candidate gene catalog across Digestion, Detoxification, Sex Determination, Immunity, Silk Production, and Toxin Biogenesis with GO, KEGG, Pfam, and FPKM profiles. |
+| **Targeted Processes Candidates Bar Chart** | [`visualizations/18_Target_Processes_Candidates_Bar.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/18_Target_Processes_Candidates_Bar.png) | Publication bar chart comparing candidate gene counts across the 6 key spider physiological processes. |
+| **Target Candidates Expression Profile** | [`visualizations/19_Target_Candidates_Expression_Profile.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/19_Target_Candidates_Expression_Profile.png) | Grouped bar chart illustrating sample-specific FPKM expression of representative candidate genes. |
 
 
 
