@@ -214,6 +214,9 @@ python3 scripts/test_plotly_go.py
 | **Cumulative CPM Read Distribution** | [`visualizations/14_Cumulative_CPM_Distribution.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/14_Cumulative_CPM_Distribution.png) | Cumulative read percentage curve across ranked unigenes assessing library complexity. |
 | **GO Classification Plot** | [`visualizations/GO_Classification_with_ontology_labels.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/GO_Classification_with_ontology_labels.png) | Gene Ontology classification bar chart categorized by BP, CC, and MF. |
 | **GO Classification Dataset** | [`processed_data/Figure2_GO_Classification_Data.csv`](file:///home/angsuman/extra_spac/MD%20chakra/processed_data/Figure2_GO_Classification_Data.csv) | Full GO term breakdown data table with unigene counts and percentages across BP, CC, and MF. |
+| **KEGG Master Annotation Table** | [`downstream_results/KEGG_Pathway_Annotation_Master.xlsx`](file:///home/angsuman/extra_spac/MD%20chakra/downstream_results/KEGG_Pathway_Annotation_Master.xlsx) | Master table of 31,649 annotated unigenes with KEGG Orthology (KO), pathway maps, EC numbers, and sample FPKMs. |
+| **KEGG Pathway Classification Plot** | [`visualizations/15_KEGG_Pathway_Classification.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/15_KEGG_Pathway_Classification.png) | Horizontal bar chart of top 20 represented biological and signaling KEGG pathways. |
+| **KEGG Pathway Dotplot** | [`visualizations/16_KEGG_Pathway_Dotplot.png`](file:///home/angsuman/extra_spac/MD%20chakra/visualizations/16_KEGG_Pathway_Dotplot.png) | Multi-dimensional pathway representation bubble chart. |
 
 
 

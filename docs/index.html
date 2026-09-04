@@ -274,6 +274,23 @@
                         </td>
                     </tr>
 
+                    <!-- KEGG Pathway Functional Annotation -->
+                    <tr>
+                        <td><strong>🗺️</strong></td>
+                        <td>
+                            <strong>KEGG Pathway Functional Annotation</strong>
+                            <div class="item-desc">31,649 mapped unigenes, 770 KEGG pathways, KO numbers, EC enzymes, and BRITE functional hierarchy</div>
+                        </td>
+                        <td><span class="badge-success">✔ Fully Possible</span></td>
+                        <td>Diamond search against eggNOG orthology database with complete metabolic, cellular, and signaling pathway mappings.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/KEGG_Pathway_Annotation_Master.xlsx" class="btn-sm" download>Master (.xlsx)</a>
+                            <a href="/MD-chakra/assets/KEGG_Pathway_Annotation_Master.csv" class="btn-sm btn-secondary" download>(.csv)</a>
+                            <a href="/MD-chakra/assets/KEGG_Pathway_Classification_Stats.xlsx" class="btn-sm btn-secondary" download>Stats (.xlsx)</a>
+                            <a href="/MD-chakra/assets/15_KEGG_Pathway_Classification.png" class="btn-sm btn-secondary" target="_blank">View Plot</a>
+                        </td>
+                    </tr>
+
                     <!-- Cutoff Note -->
                     <tr>
                         <td><strong>Note</strong></td>
@@ -453,6 +470,35 @@
                     <p>Quantifies library complexity and transcript diversity, tracking the cumulative proportion of sequencing depth consumed across ranked unigenes.</p>
                     <div style="margin-top: 1rem;">
                         <a href="/MD-chakra/assets/14_Cumulative_CPM_Distribution.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Viz 8: KEGG Pathway Classification Bar Chart -->
+            <div class="viz-card">
+                <div class="viz-img-container">
+                    <img src="/MD-chakra/assets/15_KEGG_Pathway_Classification.png" alt="KEGG Pathway Functional Classification">
+                </div>
+                <div class="viz-content">
+                    <h3>KEGG Pathway Classification</h3>
+                    <p>Top 20 represented biological and signaling pathways across the spider transcriptome, highlighting Endocytosis, Ribosome, Lysosome, and Spliceosome.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="/MD-chakra/assets/15_KEGG_Pathway_Classification.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                        <a href="/MD-chakra/assets/KEGG_Pathway_Annotation_Master.xlsx" class="btn-sm" download>Master Table (.xlsx)</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Viz 9: KEGG Pathway Representation Dotplot -->
+            <div class="viz-card">
+                <div class="viz-img-container">
+                    <img src="/MD-chakra/assets/16_KEGG_Pathway_Dotplot.png" alt="KEGG Pathway Representation Dotplot">
+                </div>
+                <div class="viz-content">
+                    <h3>KEGG Pathway Representation Dotplot</h3>
+                    <p>Multi-dimensional representation of pathway transcript counts and complexity across cellular and organismal system categories.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="/MD-chakra/assets/16_KEGG_Pathway_Dotplot.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
                     </div>
                 </div>
             </div>

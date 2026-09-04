@@ -16,4 +16,11 @@ raw_data/
 fastp_qc/
 rrna_filtered/
 reference_genome/
+reference_spider_data/
+kegg_analysis/
+*.db
+*.db.gz
+*.dmnd
+*.dmnd.gz
 .DS_Store
+
