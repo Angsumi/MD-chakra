@@ -2,11 +2,11 @@ import sqlite3
 import pandas as pd
 import numpy as np
 import os
-import plotly.express as px
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 import zipfile, xml.sax.saxutils
 
-print("Starting Protein Domain Analysis & Visualization Generator...")
+print("Starting Protein Domain Analysis & Visualization Generator (Redesigned & Polished)...")
 
 os.makedirs("visualizations", exist_ok=True)
 os.makedirs("new plots/html", exist_ok=True)
@@ -136,7 +136,6 @@ print("Generated Protein_Domain_Annotation_Master.xlsx")
 # -------------------------------------------------------------------------
 # 3. Domain Categorization & Frequency Analysis
 # -------------------------------------------------------------------------
-# Define functional categories and representative domains
 domain_category_map = {
     # Proteases
     'Peptidase_A17': 'Proteases & Peptidases',
@@ -270,9 +269,8 @@ csv_to_xlsx(domain_sum_df, 'docs/assets/Protein_Domain_Classification_Stats.xlsx
 print("Saved Protein_Domain_Classification_Stats.xlsx")
 
 # -------------------------------------------------------------------------
-# 4. Generate Publication-Quality Protein Domain Visualization
+# 4. Generate Polished, Multi-Subplot Publication-Quality Figure
 # -------------------------------------------------------------------------
-# Select top representative domains across the 6 key categories
 selected_cats = [
     'Proteases & Peptidases',
     'Ion-Channel & Transport',
@@ -291,60 +289,79 @@ cat_colors = {
     'Extracellular & Structural Matrix': '#8b5cf6' # Violet
 }
 
-# Pick top 4-5 domains per category
-plot_domains = []
-for c in selected_cats:
-    sub = domain_sum_df[domain_sum_df['Functional_Category'] == c].head(4)
-    plot_domains.append(sub)
-
-plot_df = pd.concat(plot_domains).sort_values(by='Transcript_Count', ascending=True)
-
-fig_domain = go.Figure()
-
-for cat in selected_cats:
-    sub_df = plot_df[plot_df['Functional_Category'] == cat]
-    if len(sub_df) > 0:
-        fig_domain.add_trace(go.Bar(
-            y=sub_df['Domain_ID'] + " (" + sub_df['Description'] + ")",
-            x=sub_df['Transcript_Count'],
-            name=cat,
-            orientation='h',
-            marker=dict(color=cat_colors[cat], line=dict(color='#0f172a', width=1)),
-            text=sub_df['Transcript_Count'],
-            textposition='outside'
-        ))
-
-fig_domain.update_layout(
-    title=dict(
-        text="<b>Top Protein Domains in the <i>Nephila pilipes</i> Control Transcriptome</b><br><sup>Categorized by Functional Classes: Toxins, Proteases, Ion Channels, Binding, Enzymes & Extracellular Matrix</sup>",
-        font=dict(size=18, color="#0f172a", family="Plus Jakarta Sans, sans-serif"),
-        x=0.5
-    ),
-    xaxis=dict(title="<b>Number of Transcripts with Identified Domain</b>", showline=True, linecolor="#cbd5e1", linewidth=1.5, showgrid=True, gridcolor="#f1f5f9"),
-    yaxis=dict(title="<b>Pfam Protein Domain & Functional Description</b>", showline=True, linecolor="#cbd5e1", linewidth=1.5),
-    paper_bgcolor="white",
-    plot_bgcolor="white",
-    width=1100,
-    height=850,
-    legend=dict(
-        title="<b>Functional Category</b>",
-        orientation="h",
-        yanchor="bottom",
-        y=1.02,
-        xanchor="center",
-        x=0.5,
-        bgcolor="rgba(255,255,255,0.9)",
-        bordercolor="#cbd5e1",
-        borderwidth=1
-    ),
-    margin=dict(l=380, r=60, t=140, b=60)
+# Create a 3x2 grid of subplots (1 panel per category) for crisp, beautiful, and zero-overlap layout
+fig = make_subplots(
+    rows=3, cols=2,
+    subplot_titles=[f"<b>{cat}</b>" for cat in selected_cats],
+    horizontal_spacing=0.28,
+    vertical_spacing=0.10
 )
 
-fig_domain.write_html("new plots/html/plotly_protein_domains.html")
-fig_domain.write_image("visualizations/17_Protein_Domain_Classification.png", scale=3)
-fig_domain.write_image("visualizations/17_Protein_Domain_Classification.pdf")
-fig_domain.write_image("docs/assets/17_Protein_Domain_Classification.png", scale=3)
-fig_domain.write_image("docs/assets/17_Protein_Domain_Classification.pdf")
-print("Saved Protein Domain Classification Plot (HTML, PNG, PDF)")
+coords = [(1,1), (1,2), (2,1), (2,2), (3,1), (3,2)]
+
+for idx, cat in enumerate(selected_cats):
+    r, c = coords[idx]
+    sub = domain_sum_df[domain_sum_df['Functional_Category'] == cat].head(4).sort_values(by='Transcript_Count', ascending=True)
+    
+    # Form clean, concise labels
+    clean_labels = [f"<b>{row['Domain_ID']}</b><br><span style='font-size:10px;color:#64748b;'>{row['Description'][:32]}</span>" for _, row in sub.iterrows()]
+    
+    fig.add_trace(
+        go.Bar(
+            y=clean_labels,
+            x=sub['Transcript_Count'],
+            orientation='h',
+            marker=dict(
+                color=cat_colors[cat],
+                line=dict(color='#0f172a', width=1)
+            ),
+            text=sub['Transcript_Count'],
+            textposition='outside',
+            textfont=dict(size=11, family="Plus Jakarta Sans, sans-serif", color="#0f172a"),
+            cliponaxis=False,
+            showlegend=False
+        ),
+        row=r, col=c
+    )
+    
+    # Update axes
+    fig.update_xaxes(
+        showline=True, linecolor="#cbd5e1", linewidth=1.2,
+        showgrid=True, gridcolor="#f8fafc",
+        title_text="Transcripts" if r == 3 else "",
+        title_font=dict(size=11, color="#475569"),
+        row=r, col=c
+    )
+    fig.update_yaxes(
+        showline=True, linecolor="#cbd5e1", linewidth=1.2,
+        tickfont=dict(size=11, family="Plus Jakarta Sans, sans-serif"),
+        row=r, col=c
+    )
+
+fig.update_layout(
+    title=dict(
+        text="<b>Top Protein Domains in the <i>Nephila pilipes</i> Control Transcriptome</b><br><sup style='color:#64748b;font-size:14px;'>Targeted Functional Categorization: Toxins, Proteases, Ion Channels, Binding Scaffolds, Catalytic Enzymes & Extracellular Matrix</sup>",
+        font=dict(size=20, color="#0f172a", family="Plus Jakarta Sans, sans-serif"),
+        x=0.5,
+        y=0.97
+    ),
+    paper_bgcolor="white",
+    plot_bgcolor="white",
+    width=1350,
+    height=1000,
+    margin=dict(l=180, r=80, t=110, b=70)
+)
+
+# Style subplot title font
+for annotation in fig['layout']['annotations']:
+    if 'text' in annotation and any(cat in annotation['text'] for cat in selected_cats):
+        annotation['font'] = dict(size=14, color="#1e293b", family="Plus Jakarta Sans, sans-serif")
+
+fig.write_html("new plots/html/plotly_protein_domains.html")
+fig.write_image("visualizations/17_Protein_Domain_Classification.png", scale=3)
+fig.write_image("visualizations/17_Protein_Domain_Classification.pdf")
+fig.write_image("docs/assets/17_Protein_Domain_Classification.png", scale=3)
+fig.write_image("docs/assets/17_Protein_Domain_Classification.pdf")
+print("Saved Polished 6-Panel Protein Domain Classification Plot (HTML, PNG, PDF)")
 
 print("Protein Domain Analysis and Visualizations completed successfully!")
