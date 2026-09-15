@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+import re
+
+html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -897,3 +899,9 @@
 
 </body>
 </html>
+"""
+
+with open('docs/index.html', 'w') as f:
+    f.write(html_content)
+
+print("Updated docs/index.html with full 20-Analysis Suite and interactive visuals!")

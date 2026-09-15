@@ -1,0 +1,8 @@
+Metric,Value,Formatted
+Total Transcripts / CDS,72441.0,"72,441"
+Total Assembly Length (Mb),57.08,57.08 Mb
+Mean Transcript Length (bp),787.0,787 bp
+Median Transcript Length (bp),426.0,426 bp
+Maximum Length (bp),41706.0,"41,706 bp"
+Minimum Length (bp),6.0,6 bp
+Mean GC Content (%),41.32,41.32%

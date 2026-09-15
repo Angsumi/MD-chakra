@@ -1,0 +1,9 @@
+Channel_Family,Count,Type
+ASIC / DEG / ENaC Acid-Sensing Channels,48,Sodium / Proton
+Inward-Rectifier Potassium Channels (Kir),52,Potassium
+Voltage-Gated Sodium Channels (Nav),64,Voltage-Gated
+Transient Receptor Potential (TRP Channels),86,Sensory / Cation
+Voltage-Gated Calcium Channels (Cav / Ion_trans),142,Voltage-Gated
+Voltage-Gated Potassium Channels (Kv),168,Voltage-Gated
+Glutamate-Binding Ion Channels (GluR / NMDA / AMPA),204,Ligand-Gated
+Ligand-Gated Ion Channels (Lig_chan),231,Ligand-Gated

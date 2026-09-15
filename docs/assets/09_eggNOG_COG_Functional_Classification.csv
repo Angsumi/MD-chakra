@@ -1,0 +1,18 @@
+Code,Name,Count,Category
+[J],Translation & ribosome biogenesis,1245,Information
+[K],Transcription,1890,Information
+[L],"Replication, recombination & repair",1420,Information
+[D],Cell cycle control & mitosis,890,Cellular
+[O],Posttranslational modification & chaperones,2450,Cellular
+[T],Signal transduction mechanisms,3120,Cellular
+[U],Intracellular trafficking & secretion,1780,Cellular
+[V],Defense mechanisms,620,Cellular
+[C],Energy production & conversion,1350,Metabolism
+[G],Carbohydrate transport & metabolism,980,Metabolism
+[E],Amino acid transport & metabolism,1120,Metabolism
+[F],Nucleotide transport & metabolism,540,Metabolism
+[H],Coenzyme transport & metabolism,430,Metabolism
+[I],Lipid transport & metabolism,1280,Metabolism
+[P],Inorganic ion transport & metabolism,890,Metabolism
+[Q],Secondary metabolites biosynthesis & transport,410,Metabolism
+[S],Function unknown,4680,Poorly Characterized

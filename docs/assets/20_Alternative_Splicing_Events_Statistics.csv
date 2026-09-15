@@ -1,0 +1,6 @@
+Event_Type,Count,Percentage
+Mutually Exclusive Exons (MXE),1312,9.0
+Retained Intron (RI),2350,16.2
+Skipped Exon (SE / Cassette Exon),3120,21.5
+Alternative 5' Splice Site (A5SS),3450,23.8
+Alternative 3' Splice Site (A3SS),4280,29.5
