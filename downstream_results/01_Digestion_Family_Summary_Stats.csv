@@ -1,0 +1,29 @@
+Functional_Process,Enzyme_Class,Enzyme_Family,Transcript_Count,Expressed_Transcripts,Mean_FPKM,Total_FPKM,NPFM1_Sum,NPFM2_Sum,NPFM3_Sum,NPFM4_Sum
+Carbohydrate & Chitin Digestion,Glycoside Hydrolases,Mannosidase (GH38/GH47),15,2,0.5287254026400476,7.930881039600715,23.35885382353961,1.071641801232658,0.9781403339426621,6.314888199687928
+Carbohydrate & Chitin Digestion,Chitinolytic Enzymes,Chitinase (GH18),20,1,0.008680937455153201,0.17361874910306402,0.0100658680407323,0.205425825948876,0.460388037088505,0.0185952653341428
+Carbohydrate & Chitin Digestion,Chitinolytic Enzymes,Beta-Hexosaminidase (GH20),8,0,0.0,0.0,0.0,0.0,0.0,0.0
+Carbohydrate & Chitin Digestion,Glycoside Hydrolases,Alpha-Amylase (GH13),20,0,0.0,0.0,0.0,0.0,0.0,0.0
+Carbohydrate & Chitin Digestion,Glycoside Hydrolases,Alpha/Beta-Glucosidase (GH1/GH31),35,0,0.0,0.0,0.0,0.0,0.0,0.0
+Carbohydrate & Chitin Digestion,Glycoside Hydrolases,Beta-Galactosidase (GH2/GH35),6,0,0.0,0.0,0.0,0.0,0.0,0.0
+Lipid Digestion & Hydrolysis,Lipases & Esterases,Carboxylesterase / Neutral Lipase,64,17,0.5457233864667268,34.926296733870515,65.65443073154464,30.37389224394531,7.85329490483388,35.823569055158245
+Lipid Digestion & Hydrolysis,Phospholipases,Phospholipase D (PLD),15,1,0.03449087226566196,0.5173630839849295,1.20544072644,0.17651871470456,0.332768489862651,0.354724404932507
+Lipid Digestion & Hydrolysis,Lipases & Esterases,Pancreatic/Triacylglycerol Lipase,56,0,0.0,0.0,0.0,0.0,0.0,0.0
+Lipid Digestion & Hydrolysis,Phospholipases,Phospholipase A2 (PLA2),16,0,0.0,0.0,0.0,0.0,0.0,0.0
+Lipid Digestion & Hydrolysis,Phospholipases,Phospholipase C (PLC),32,0,0.0,0.0,0.0,0.0,0.0,0.0
+Nucleic Acid & Phosphate Digestion,Phosphatases,Alkaline Phosphatase,23,0,0.0008308347068709913,0.0191091982580328,0.0411555623521637,0.0,0.0352812306799675,0.0
+Nucleic Acid & Phosphate Digestion,Nucleases,Deoxyribonuclease (DNase),9,0,0.0,0.0,0.0,0.0,0.0,0.0
+Nucleic Acid & Phosphate Digestion,Nucleases,Ribonuclease (RNase),68,0,0.0,0.0,0.0,0.0,0.0,0.0
+Nucleic Acid & Phosphate Digestion,Phosphatases,Acid Phosphatase,12,0,0.0,0.0,0.0,0.0,0.0,0.0
+Protein Digestion & Proteolysis,Aspartic Proteases,Cathepsin D/E & Pepsin (Peptidase A1),934,113,0.06718499570790631,62.75078599118449,21.449271180410975,28.168292588924395,104.55038708810955,96.83519310729307
+Protein Digestion & Proteolysis,Serine Proteases,Trypsin / Peptidase S1,237,6,0.046224687376782585,10.955250908297472,11.525762236976048,14.513415653752562,4.235562611523352,13.546263130937929
+Protein Digestion & Proteolysis,Cysteine Proteases,Calpain (Peptidase C2),16,1,0.07106457147882084,1.1370331436611334,0.418934893978902,0.430273284908632,0.3897369396639,3.3091874560931
+Protein Digestion & Proteolysis,Cysteine Proteases,Cathepsin B/L / Papain (C1A),68,1,0.014147815223813835,0.9620514352193408,0.721417992056888,0.88186312442374,1.29041070449999,0.954513919896745
+Protein Digestion & Proteolysis,Serine Proteases,Subtilisin-like (Peptidase S8),27,4,0.03347981659243099,0.9039550479956366,0.4189469244468122,1.0288235898605484,1.7016021464795124,0.4664475311956738
+Protein Digestion & Proteolysis,Metalloproteases,Matrix Metalloproteinase (M10),10,1,0.06000416839869893,0.6000416839869893,1.21887220211514,0.563253475156498,0.44725915343888,0.170781905237439
+Protein Digestion & Proteolysis,Metalloproteases,Carboxypeptidase A/B (Peptidase M14),16,3,0.032814091361521004,0.5250254617843361,0.276928793300675,0.243243602727732,1.258182376532496,0.3217470745764413
+Protein Digestion & Proteolysis,Metalloproteases,Aminopeptidase N (Peptidase M1),36,1,0.004135312475969361,0.148871249134897,0.0,0.235507382019707,0.359977614519881,0.0
+Protein Digestion & Proteolysis,Metalloproteases,Astacin Metalloprotease (M12A),93,0,0.0,0.0,0.0,0.0,0.0,0.0
+Protein Digestion & Proteolysis,Metalloproteases,Dipeptidyl Peptidase,4,0,0.0,0.0,0.0,0.0,0.0,0.0
+Protein Digestion & Proteolysis,Metalloproteases,Neprilysin (Peptidase M13),76,0,0.0,0.0,0.0,0.0,0.0,0.0
+Protein Digestion & Proteolysis,Serine Proteases,Elastase,10,0,0.0,0.0,0.0,0.0,0.0,0.0
+Protein Digestion & Proteolysis,Serine Proteases,Prolyl Oligopeptidase (Peptidase S9),26,0,0.0,0.0,0.0,0.0,0.0,0.0

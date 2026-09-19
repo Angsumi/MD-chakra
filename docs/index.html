@@ -319,6 +319,23 @@
                         </td>
                     </tr>
 
+                    
+                    <!-- Digestion Functional Enzyme Repertoire -->
+                    <tr style="background: rgba(16, 185, 129, 0.05);">
+                        <td><strong>🍽️</strong></td>
+                        <td>
+                            <strong>Digestion: Functional Enzyme Repertoire & Clustered Heatmap</strong>
+                            <div class="item-desc">1,952 curated digestive enzymes classified across 4 digestive processes and 28 enzyme families with abundance matrices</div>
+                        </td>
+                        <td><span class="badge-success">✔ Complete</span></td>
+                        <td>Clustered heatmap of Enzyme Families × Functional Processes with transcript counts and abundance, plus gene-level replicate profiles.</td>
+                        <td>
+                            <a href="/MD-chakra/assets/01_Digestion_Enzyme_Master_Annotation.xlsx" class="btn-sm" download>Master (.xlsx)</a>
+                            <a href="/MD-chakra/assets/01_Digestion_Functional_Enzyme_Heatmap.pdf" class="btn-sm btn-secondary" download>Heatmap (.pdf)</a>
+                            <a href="/MD-chakra/assets/01_Digestion_Family_by_Process_Matrix.csv" class="btn-sm btn-secondary" download>Matrix (.csv)</a>
+                        </td>
+                    </tr>
+
                     <!-- Targeted Biological Processes Candidate Analysis -->
                     <tr>
                         <td><strong>🎯</strong></td>
@@ -342,6 +359,23 @@
         <!-- Section 2: Core Data Deliverables Cards -->
         <h2 id="core-highlights" class="section-title">Core Deliverable Highlights</h2>
         <div class="grid">
+
+            <!-- Card: Digestion Repertoire -->
+            <div class="card" style="border-color: rgba(16, 185, 129, 0.4);">
+                <div class="card-header">
+                    <h3 style="color: #10b981;">Digestive Enzyme Repertoire</h3>
+                    <span class="badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981;">.xlsx / .csv / .pdf</span>
+                </div>
+                <p>Curated master repertoire of 1,952 digestive enzymes across Protein, Lipid, Carbohydrate/Chitin, and Nucleic Acid digestion with exact replicate abundance.</p>
+                <div class="process">
+                    <strong>Deliverables:</strong>
+                    Clustered Heatmap (Families × Processes), Gene-level Replicate Heatmap, Multi-sheet Master Excel, and Family Summary Matrices.
+                </div>
+                <div style="display: flex; gap: 0.5rem; margin-top: auto; flex-wrap: wrap;">
+                    <a href="/MD-chakra/assets/01_Digestion_Enzyme_Master_Annotation.xlsx" class="btn" style="flex: 1;" download>Master Excel</a>
+                    <a href="/MD-chakra/assets/01_Digestion_Functional_Enzyme_Heatmap.pdf" class="btn btn-secondary" style="flex: 1;" download>Heatmap PDF</a>
+                </div>
+            </div>
             
             <!-- Card 1 -->
             <div class="card">
@@ -730,6 +764,51 @@
         <!-- ============================================================= -->
         <h2 class="section-title" style="margin-top: 4rem;">Multivariate Expression & Functional Visualizations</h2>
         <div class="grid">
+
+            <!-- Viz: Digestion Clustered Heatmap -->
+            <div class="viz-card" style="border-color: rgba(16, 185, 129, 0.35);">
+                <div class="viz-img-container">
+                    <img src="/MD-chakra/assets/01_Digestion_Functional_Enzyme_Heatmap.png" alt="Digestion Functional Enzyme Clustered Heatmap">
+                </div>
+                <div class="viz-content">
+                    <h3>Functional Digestive Enzyme Heatmap</h3>
+                    <p>Hierarchically clustered heatmap displaying Enzyme Families × Functional Digestive Processes with transcript count overlays and log2-abundance shading.</p>
+                    <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                        <a href="/MD-chakra/assets/01_Digestion_Functional_Enzyme_Heatmap.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                        <a href="/MD-chakra/assets/01_Digestion_Functional_Enzyme_Heatmap.png" class="btn-sm btn-secondary" download>Download PNG</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Viz: Digestion Gene Expression Heatmap -->
+            <div class="viz-card" style="border-color: rgba(59, 130, 246, 0.35);">
+                <div class="viz-img-container">
+                    <img src="/MD-chakra/assets/01b_Digestion_Gene_Expression_Heatmap.png" alt="Top Expressed Digestive Enzymes Across Replicates">
+                </div>
+                <div class="viz-content">
+                    <h3>Top Expressed Digestive Enzymes</h3>
+                    <p>Sample-level clustered expression profiles (NPFM1–NPFM4) of top candidate digestive enzymes with enzyme class sidebar color-coding.</p>
+                    <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                        <a href="/MD-chakra/assets/01b_Digestion_Gene_Expression_Heatmap.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                        <a href="/MD-chakra/assets/01b_Digestion_Gene_Expression_Heatmap.png" class="btn-sm btn-secondary" download>Download PNG</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Viz: Digestion Repertoire Breakdown -->
+            <div class="viz-card" style="border-color: rgba(245, 158, 11, 0.35);">
+                <div class="viz-img-container">
+                    <img src="/MD-chakra/assets/01c_Digestion_Family_Repertoire_Breakdown.png" alt="Digestion Enzyme Family Diversity & Abundance Profile">
+                </div>
+                <div class="viz-content">
+                    <h3>Digestive Enzyme Diversity & Abundance</h3>
+                    <p>Comparative dual-panel profile of gene repertoire richness versus total transcriptional output across digestive functional classes.</p>
+                    <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                        <a href="/MD-chakra/assets/01c_Digestion_Family_Repertoire_Breakdown.pdf" class="btn-sm btn-secondary" download>Download PDF</a>
+                        <a href="/MD-chakra/assets/01c_Digestion_Family_Repertoire_Breakdown.png" class="btn-sm btn-secondary" download>Download PNG</a>
+                    </div>
+                </div>
+            </div>
 
             <!-- Viz 1: PCA -->
             <div class="viz-card">

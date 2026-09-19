@@ -1,0 +1,29 @@
+Enzyme_Family,Carbohydrate & Chitin Digestion,Lipid Digestion & Hydrolysis,Nucleic Acid & Phosphate Digestion,Protein Digestion & Proteolysis
+Acid Phosphatase,0,0,12,0
+Alkaline Phosphatase,0,0,23,0
+Alpha-Amylase (GH13),20,0,0,0
+Alpha/Beta-Glucosidase (GH1/GH31),35,0,0,0
+Aminopeptidase N (Peptidase M1),0,0,0,36
+Astacin Metalloprotease (M12A),0,0,0,93
+Beta-Galactosidase (GH2/GH35),6,0,0,0
+Beta-Hexosaminidase (GH20),8,0,0,0
+Calpain (Peptidase C2),0,0,0,16
+Carboxylesterase / Neutral Lipase,0,64,0,0
+Carboxypeptidase A/B (Peptidase M14),0,0,0,16
+Cathepsin B/L / Papain (C1A),0,0,0,68
+Cathepsin D/E & Pepsin (Peptidase A1),0,0,0,934
+Chitinase (GH18),20,0,0,0
+Deoxyribonuclease (DNase),0,0,9,0
+Dipeptidyl Peptidase,0,0,0,4
+Elastase,0,0,0,10
+Mannosidase (GH38/GH47),15,0,0,0
+Matrix Metalloproteinase (M10),0,0,0,10
+Neprilysin (Peptidase M13),0,0,0,76
+Pancreatic/Triacylglycerol Lipase,0,56,0,0
+Phospholipase A2 (PLA2),0,16,0,0
+Phospholipase C (PLC),0,32,0,0
+Phospholipase D (PLD),0,15,0,0
+Prolyl Oligopeptidase (Peptidase S9),0,0,0,26
+Ribonuclease (RNase),0,0,68,0
+Subtilisin-like (Peptidase S8),0,0,0,27
+Trypsin / Peptidase S1,0,0,0,237
