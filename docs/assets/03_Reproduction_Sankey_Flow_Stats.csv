@@ -1,0 +1,8 @@
+Reproductive_Tier,Functional_Module,Gene_Complex,Gene_Count,Mean_FPKM,Total_FPKM
+1_Endocrine_Signals,Nuclear Hormone Signaling,Ecdysteroid & JH Pathways,32,0.085419101357493,2.733411243439776
+1_Endocrine_Signals,Sex Differentiation Regulators,Sox/Fox Transcription Factors,52,0.001929268119838566,0.10032194223160543
+2_Sex_Determination,Germline Stem Cell Maintenance,Vasa/Nanos/Piwi Complex,120,0.016939935067746582,2.0327922081295897
+2_Sex_Determination,Sex Determination Cascade,Dsx/Tra/Fem Axis,9,0.0,0.0
+3_Female_Processes,Oogenesis & Eggshell Assembly,Chorion & ZP Matrix,15,0.0,0.0
+3_Female_Processes,Vitellogenesis & Egg Provisioning,Vitellogenin & Vg Receptor,182,0.26069869559452624,47.447162598203775
+4_Male_Processes,Spermatogenesis & Motility,Sperm Flagellar & Nuclear Factors,17,0.0,0.0

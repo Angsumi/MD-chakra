@@ -1,0 +1,10 @@
+Immune_Module,Immune_Family,Gene_Count,Mean_FPKM,Total_FPKM,NPFM1_Sum,NPFM2_Sum,NPFM3_Sum,NPFM4_Sum
+Antimicrobial Effectors,Antimicrobial Peptides (AMPs),2,0.0,0.0,0.0,0.0,0.0,0.0
+Antimicrobial Effectors,Lysozymes,7,0.0,0.0,0.0,0.0,0.0,0.0
+Melanization & Coagulation,Prophenoloxidase (ProPO),2,0.0,0.0,0.0,0.0,0.0,0.0
+Melanization & Coagulation,Serpin Inhibitors,77,0.0035799035897867582,0.2756525764135804,0.0082802275676589,0.418970414971315,0.660063115611979,0.0152965475033686
+Pathogen Recognition,C-type Lectins (CTL),72,0.0,0.0,0.0,0.0,0.0,0.0
+Pathogen Recognition,PGRP Family,4,0.0,0.0,0.0,0.0,0.0,0.0
+Pathogen Recognition,Scavenger Receptors,6,0.0,0.0,0.0,0.0,0.0,0.0
+Toll Signaling Pathway,Toll Intracellular Cascade,33,0.0,0.0,0.0,0.0,0.0,0.0
+Toll Signaling Pathway,Toll Receptors (TLR),16,0.17969632285489898,2.8751411656783836,0.936543417870381,6.57967211843171,3.672748622936108,0.3116005034753348

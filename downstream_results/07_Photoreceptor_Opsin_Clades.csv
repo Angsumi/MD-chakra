@@ -1,0 +1,13 @@
+Gene_ID,protein_id,Evolutionary_Clade,Spectral_Sensitivity_Role,Mean_FPKM,Bootstrap_Support_Pct
+NPIL_Opsin_Rh1_1,GFT12450.1,Rh1 / Classical Rhabdomeric Opsin,Green/Broad Visual Spectrum,18.4,98
+NPIL_Opsin_Rh1_2,GFS98124.1,Rh1 / Classical Rhabdomeric Opsin,Green/Broad Visual Spectrum,12.1,95
+NPIL_Opsin_Rh2,GFU44102.1,Rh2 / Major Eye Opsin,Mid-Wavelength Visual Light,8.6,92
+NPIL_Opsin_LWS_1,GFT88231.1,Long-Wavelength Sensitive (LWS),520-560 nm (Red/Amber Vision),15.3,99
+NPIL_Opsin_LWS_2,GFS31190.1,Long-Wavelength Sensitive (LWS),520-560 nm (Red/Amber Vision),6.7,88
+NPIL_Opsin_UVS_1,GFT54312.1,UV-Sensitive Opsin (UVS),340-380 nm (Ultraviolet Navigation),9.2,97
+NPIL_Opsin_UVS_2,GFU12093.1,UV-Sensitive Opsin (UVS),340-380 nm (Ultraviolet Navigation),4.5,91
+NPIL_Opsin_Blue,GFS66451.1,Short-Wavelength / Blue Opsin (SWS),420-460 nm (Blue Skylight),11.8,94
+NPIL_Arthropsin,GFT00921.1,Non-Visual Arthropsin / C-Opsin,Circadian Entrainment / Extraretinal,3.2,85
+NPIL_Peropsin,GFS11082.1,Peropsin / Neuropsin Group,Photoisomerase / Chromophore Storage,2.1,82
+NPIL_Visual_Arrestin1,GFT43210.1,Arrestin-1 Core Clade,Rapid Opsin Deactivation,24.5,99
+NPIL_Visual_Arrestin2,GFS78901.1,Arrestin-2 Peripheral Clade,Secondary Photoreceptor Adaptation,14.2,96
